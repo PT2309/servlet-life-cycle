@@ -13,22 +13,27 @@ public class Servlet extends HttpServlet {
 
     private String outputString;
 
-    public void init() throws ServletException {
-
-        outputString = "Lifecycle of servlet.Servlet";
-        System.out.println("Initializing the web servlet");
-    }
+    // Define a the init() method and declare outputString variable inside the function
+    // Print - "Initializing the web servlet" in the terminal when servlet get initialized.
+    /*
+     * Code goes here
+     */
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        System.out.println("Inside doGet function for writing response");
+        // Set the contentType to ("text/html")
+        // Create an instance of PrintWriter with the name out and write the response
+        // Print - "Inside doGet function for writing response" in the terminal when localhost:8080/home is request is made from the browser
+        /*
+        * Code goes here
+        */
         out.println(outputString);
     }
 
-    public void destroy(){
 
-        System.out.println("Destroying the servlet component when the server shuts down");
-    }
+    // Define a the destroy() method and Print - "Destroying the servlet component when the server shuts down"
+    // in the terminal when servlet shuts down.
+    /*
+    *   Code goes here
+    */
 }
